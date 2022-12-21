@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".fragmentOrders"
+    android:background="@drawable/blueback"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+
+            android:orientation="vertical"
+            android:padding="24dp"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="Orders"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="400dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/orderlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:dividerHeight="8dp"
+                    android:layout_margin="15dp"
+                    android:scrollbars="none">
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/btnClear"
+            android:backgroundTint="@color/appColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="170dp"
+            android:text="Clear Items"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnDate"
+            style="?android:spinnerStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="120dp"
+            android:text="select a date"
+            android:backgroundTint="@color/appColor"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:backgroundTint="@color/appColor"
+            android:textColor="@color/black"
+            android:id="@+id/btnTime"
+            style="?android:spinnerStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:width="250dp"
+            android:height="100dp"
+            android:text="select time"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="100dp"
+            android:enabled="false"
+            android:text="Place Orders"
+            android:backgroundTint="@color/appColor"
+            android:textSize="20sp">
+
+        </Button>
+    </RelativeLayout>
+
+    
+</FrameLayout>
